@@ -4,7 +4,7 @@ In this project you are given a web-based application that reads RSS feeds. The 
 
 # Instructions
 
-1.Download or copy the repository to your computer and open index.html from the root folder.
-2.The tests will run automatically.
-3.Passed test should highlight green and failed - red.
-4.See the source code and comments for the tests in [feedreader.js](https://github.com/clitorrent/feedreader-testing/blob/master/jasmine/spec/feedreader.js)
+1.  Download or copy the repository to your computer and open index.html from the root folder.
+2.  The tests will run automatically.
+3.  Passed test should highlight green and failed - red.
+4.  See the source code and comments for the tests in [feedreader.js](https://github.com/clitorrent/feedreader-testing/blob/master/jasmine/spec/feedreader.js)
