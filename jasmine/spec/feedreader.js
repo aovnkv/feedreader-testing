@@ -100,11 +100,16 @@ $(
             });
         });
         /* TODO: Write a new test suite named "New Feed Selection" */
-        describe('New Feed Selection', function (done) {
-            let feedContent0 = $('.feed').html();
-            beforeEach(function (done) {
-                loadFeed(0, function () {
-                    done();
+        describe('New Feed Selection', function () {
+            let feedContent1,
+                feedContent0;
+            beforeEach(done => {
+                loadFeed(1, () => {
+                    feedContent1 = $('.feed').html();
+                    loadFeed(0, () => {
+                        feedContent0 = $('.feed').html();
+                        done();
+                    });
                 });
             });
             /* TODO: Write a test that ensures when a new feed is loaded
@@ -112,15 +117,7 @@ $(
              * Remember, loadFeed() is asynchronous.
              */
             it('new feed is loaded with different content', function (done) {
-                let feedContent1;
-                loadFeed(1, (done) => {
-                    feedContent1 = $('.feed').html();
-                    done();
-                });
-                expect(feedContent0).not.toEqual(feedContent1);
-                loadFeed(0, function (done) {
-                    done();
-                });
+                expect(feedContent0 === feedContent1).toBeFalsy();
                 done();
             });
         });
