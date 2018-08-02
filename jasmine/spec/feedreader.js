@@ -56,7 +56,6 @@ $(
 
         /* TODO: Write a new test suite named "The menu" */
         describe('The menu', function () {
-            const menu = $('.slide-menu');
             const body = $('body');
             const menuicon = $('.menu-icon-link');
             /* TODO: Write a test that ensures the menu element is
@@ -82,10 +81,10 @@ $(
         /* TODO: Write a new test suite named "Initial Entries" */
         describe('Initial entries', function () {
 
-            beforeEach(function (done) {
-                loadFeed(0, function () {
-                    done();
-                });
+            beforeEach(done => {
+                loadFeed(0, () =>
+                    done()
+                );
             });
             /* TODO: Write a test that ensures when the loadFeed
              * function is called and completes its work, there is at least
